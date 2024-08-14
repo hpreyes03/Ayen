@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+
+<div class="text-center">
+    @{
+        if (Model.DataResult != null)
+        {
+            @foreach (var joke in Model.DataResult)
+            {
+                <h1 class="display-4">@joke.Setup</h1>
+                <h2>@joke.Punchline</h2>
+                <hr />
+            }
+        }
+        else
+        {
+            <h2>No data</h2>
+        }
+    }
+    <p>Learn about <a href="https://official-joke-api.appspot.com/jokes/ten">building Web apps with ASP.NET Core</a>.</p>
+</div>
